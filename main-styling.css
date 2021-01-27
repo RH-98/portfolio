@@ -3,15 +3,9 @@
     width: 800px;
     margin: 0 auto;
 }
-  
-  /* Change the link color to #111 (black) on hover */
-  .bar li a:hover {
-    background-color: lightgray;
-    
-  }
 
 body {
-    background-color: #111;
+    background-color: lightgray;
 }
 
 h1 {
@@ -34,6 +28,12 @@ p ol ul {
     font-family: verdana;
     font-size: 16px;
 }
+
+/* Change the link color to #111 (black) on hover */
+.bar li a:hover {
+    background-color: lightgray;
+    
+  }
 
 .bar ul {
     list-style-type: none;
