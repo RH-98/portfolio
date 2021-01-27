@@ -2,6 +2,7 @@
     box-sizing:border-box;
     width: 800px;
     margin: 0 auto;
+    padding: 1px;
 }
 
 body {
@@ -30,27 +31,33 @@ p ol ul {
 }
 
 /* Change the link color to #111 (black) on hover */
-.bar li a:hover {
-    background-color: lightgray;
-    
-  }
-
-.bar ul {
+#bar {
+    position: fixed;
+    top: 0;
+    width:800px;
+    background-color:#333;
+    overflow: hidden;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #333;
-  }
-  
-   .bar li {
-    float: right;
+}
+#bar li a:hover {
+    background-color: lightgray;
+}
 
-  }
-  
-  .bar li a {
+#bar li {
+    background-color: #333;
+    float: right;
+}
+
+#bar li a {
     display: block;
-    color: rgb(12, 31, 49);
+    color: whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
+}
+
+#bar li:active{
+    background-color:lightslategray;
+}
