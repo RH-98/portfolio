@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-dark {
+    background-color: darkcyan !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color:darkcyan !important;
+}
+  
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.display-img {
+    width: 100%;
+}
+
+.home, .reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    align-self: center;
+    width: 80%;
+}
+
+.home * {
+    align-self: center;
+    text-align: center;
+}
+.home h1 {
+    font-size: 50px;
+    color: darkslategray;
+}
+
+.home h2 {
+    font-size: 60px;
+    color: darkcyan;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.home p {
+    width: 70%;
+    color: darkslategray;
+    font-family:'Courier New', Courier, monospace
+}
+
+body {
+    background-color: rgb(203, 243, 243);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
+.portfolio {
+    background-color: rgb(0, 87, 87);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.portfolio h1 {
+    font-family: cursive;
+    font-style: italic;
+    font-size: 50px;
+    align-self:center;
+    color: whitesmoke;
+}
+
+.portfolio-grid {
+    align-self: center;
+    display: grid;
+    grid-template: auto auto auto auto auto / 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 85%;
+}
+  
+.image img {
+    width: 100%;
+}
+
+.reviews {
+    justify-content: left;
+}
+
+.review {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: left;
+    border:2px solid darkcyan;
+}
+.review h2{
+    flex:3;
+    font-size: 24px;
+    text-align: left;
+
+}
+.review p {
+    text-align: left;
+    flex:7;
+}
+.about {
+    width: 80%;
+    align-self: center;
+}
+.about-image {
+    float: left;
+    width: 40%;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+.about p {
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+.footer :any-link {
+    color:whitesmoke;
+}
