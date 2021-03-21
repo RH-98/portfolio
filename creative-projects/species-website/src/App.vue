@@ -36,8 +36,11 @@ export default {
 }
 
 body {
-  margin: 50px 100px;
+  padding-bottom: 50px;
+}
 
+.app {
+  margin: 50px 100px;
 }
 
 #menu {
@@ -49,7 +52,7 @@ body {
 }
 
 #menu a {
-  color: #B84901;
+  color: #000;
 }
 
 #brand {
@@ -83,7 +86,18 @@ body {
   margin: 0px;
 }
 
-.browse {
-  margin-right: 50px;
+.fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px 0;
+    bottom: 0;
+    text-align: left;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto; /* Center the DIV horizontally */
 }
 </style>
