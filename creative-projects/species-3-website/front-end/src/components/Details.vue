@@ -15,15 +15,14 @@
     </div>
     <div class="comments" v-for="comment in comments" :key="comment._id">
       <div class="commentArea">
-        <h2>{{comment.user}}</h2>
+        <h2>{{comment.user.firstName}} {{comment.user.lastName}}</h2>
         <p>{{comment.comment}}</p>
-        <button @click="deleteComment(comment._id)">Delete</button>
+        <button v-if="comment.user._id === currUser._id" @click="deleteComment(comment._id)">Delete</button>
       </div>
+      <hr>
     </div>
       <p></p>
       <form @submit.prevent="addComment">
-        <input v-model="user" placeholder="Username">
-        <p></p>
         <textarea v-model="commentSpace" placeholder="Comment here!"></textarea>
         <p></p>
         <button type="submit">Add Comment</button>
@@ -38,7 +37,6 @@ export default {
   name: 'Details',
   data() {
     return {
-      user: "",
       commentSpace: "",
       comments: [],
     }
@@ -47,25 +45,26 @@ export default {
     this.animal = this.$root.$data.currentAnimal;
     this.getComments();
   },
+  computed: {
+    currUser() {
+      return this.$root.$data.user;
+    }
+  },
   methods: {
       async getComments(){
           try {
           const response = await axios.get(`/api/animals/${this.animal._id}/comments`);
-          console.log(response.data)
           this.comments = response.data;
           console.log(this.comments)
         } catch (error) {
-          console.log("There was a problem!")
           console.log(error);
         }
       },
       async addComment() {
         try {
           await axios.post(`/api/animals/${this.animal._id}/comments`, {
-            user: this.user,
             comment: this.commentSpace,
           });
-          this.user = "";
           this.commentSpace = "";
           this.getComments();
         } catch (error) {
@@ -141,8 +140,6 @@ button {
 }
 
 .commentArea {
-  width: 70%;
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
   align-content: center;
