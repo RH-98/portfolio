@@ -110,7 +110,7 @@ export default {
           name: this.name,
           sci_name: this.sci_name,
           habitat: this.habitat,
-          status: this.habitat,
+          status: this.status,
           path: r1.data.path,
           description: this.description,
         });
